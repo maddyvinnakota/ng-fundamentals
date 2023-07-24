@@ -1,10 +1,18 @@
 import {Component, OnInit} from '@angular/core';
-import {EventService} from "../common/event.service";
-import {ToasterService} from "../common/toaster.service";
+import {EventService} from "../shared/event.service";
+import {ToasterService} from "../shared/toaster.service";
 
 @Component({
-  templateUrl: './event-list.component.html',
-  styleUrls: ['./event-list.component.css']
+  template: `
+    <div>
+      <p>All Upcoming Events</p>
+      <div class="row">
+        <div *ngFor="let eve of events" class="col-md-5">
+          <event-thumbnail (click)="handleEventClicked(eve.name)" [eventInfo]="eve"/>
+        </div>
+      </div>
+    </div>
+  `
 })
 export class EventListComponent implements OnInit {
 

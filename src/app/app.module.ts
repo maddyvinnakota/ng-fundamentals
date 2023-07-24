@@ -8,8 +8,10 @@ import {NavBarComponent} from './nav/navbar.component';
 import {RouterModule} from "@angular/router";
 import {appRoutes} from "./routes";
 import {EventDetailsComponent} from "./events/event-details.component";
-import {EventService} from "./common/event.service";
-import {ToasterService} from "./common/toaster.service";
+import {EventService} from "./shared/event.service";
+import {ToasterService} from "./shared/toaster.service";
+import {CreateEventComponent} from "./events/create-event.component";
+import {Page404Component} from "./error/page-404.component";
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import {ToasterService} from "./common/toaster.service";
     EventListComponent,
     EventThumbnailComponent,
     EventDetailsComponent,
-    NavBarComponent
+    NavBarComponent,
+    CreateEventComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
