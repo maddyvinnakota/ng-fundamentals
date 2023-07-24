@@ -1,0 +1,10 @@
+<div>
+
+  <p>Events</p>
+
+  <div class="row">
+    <div *ngFor="let eve of events" class="col-md-5">
+      <event-thumbnail (click)="handleEventClicked(eve.name)" [eventInfo]="eve"/>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+.hoverwell:hover{
+  background-color: #485563;
+  cursor: pointer;
+}
+
+.container{
+  padding-left: 10px;
+}
+
+
+.pointable{
+  cursor: pointer;
+}
+
+button {
+  color: #555;
+}
+
+[hidden] {
+  display: none !important;
+}
